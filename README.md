@@ -1,5 +1,20 @@
 # Cafe_Website
-Cafe website developed using Html,Css,Js
+Cafe website developed using Html,Css,Js (Not Responsive)
+
+An authentic cafe website template using HTML and CSS consist of mostly black,yellow and white colors with a few javascripts.
+
+## Contents
+- Home
+- Our Story
+- Menu
+- Contact
+- Reservation
+
+### How to run the template
+- Install VScode
+- Run Home.html in browser.
+
+A frontend template that can be used for a online cafe system. The template is not responsive though as I didn't use bootstrap or tailwind.
 
 ![127 0 0 1_5501_Cafe_Website_home html (1)](https://user-images.githubusercontent.com/95492327/227709785-91029c5a-91f9-4d75-88a5-cc56a672cb9e.png)
 ![_D__My%20Folder_Web%20Development_My%20Websites_Cafe_Website_contact html](https://user-images.githubusercontent.com/95492327/227709787-74ea05ee-1a4a-4520-a43a-ede48128b346.png)
@@ -7,5 +22,6 @@ Cafe website developed using Html,Css,Js
 ![_D__My%20Folder_Web%20Development_My%20Websites_Cafe_Website_story html](https://user-images.githubusercontent.com/95492327/227709789-9f3d4e87-9b4a-4d51-a650-adb0c79b725c.png)
 ![image](https://github.com/Uncaught-TypeError/Cafe_Website/assets/95492327/f5ae679e-3960-43e5-887f-7c397e84f024)
 
+Feel free to use my code and enjoy coding ❤
 
 
