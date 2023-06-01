@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a96c5020c6.js" crossorigin="anonymous"></script>
+    <script src="script1.js"></script>
+    <title>White & Yellow</title>
+</head>
+<body>
+    <section class="nav-hidden-section" id="hiddennavbar">
+        <i class="fa-solid fa-x" onclick="closenav()"></i>
+        <div class="nav-box">
+            <a style="color:white;">Home</a>
+            <a href="story.html">Our Story</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+            <a href="reservation.html">Reservation</a>
+        </div>
+    </section>
+    <!-- header -->
+    <section id="navSec">
+        <div class="nav-bar">
+            <i class="fa-solid fa-bars" id="baricon" onclick="opennav()"></i>
+            <span class="middle-title">
+                White & Yellow
+            </span>
+            <span class="right-title" id="booktable">
+                Book a Table
+            </span>
+        </div>
+    </section>
+    
+    <!-- Fixed Side Bars -->
+    <section class="sidebarsleft">
+        <div class="left-bar">
+            <span class="sidetext1">See Our Menu</span>
+            <span class="sidetext2">
+                <img src="icons/fried-egg (1).png" alt="" width="40px"
+                height="40px" onmouseover="yellowEgg(this)" onmouseout="whiteEgg(this)">
+            </span>
+        </div>
+    </section>
+    <section class="sidebarsright">
+        <div class="right-bar">
+            <div class="sideblock1"></div>
+            <div class="sideblock2">
+                <img src="icons/chat.png" alt="" width="40px"
+                height="40px"  onmouseover="chatbox(this)" onmouseout="talkbox(this)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Header -->
+    <section class="headerBox">
+        <span class="headerTitle">The best place to kick off your day or just take a break and enjoy a <span class="yummy">yummy breakfast</span></span>
+    </section>
+
+    <!-- first container box -->
+    <section class="first-container-box">
+        <div>
+            <img src="images/1.jpg" alt="" class="img1">
+        </div>
+        <div>
+            <img src="images/5.jpg" alt="" class="img2">
+        </div>
+    </section>
+
+    <!-- second container box -->
+    <section class="second-container-box">
+        <div class="text-container1">
+            <span class="textbox1">Our Special for Today - <span style="font-style: italic;">Breakfast!</span></span>
+            <span class="textbox2">All Day. Every Day.</span>
+        </div>
+        <div>
+            <img src="images/7.jpg" alt="" class="img3">
+        </div>
+    </section>
+
+    <!-- third container box -->
+    <section class="third-container-box">
+        <div>
+            <img src="images/8.jpg" alt="" class="img4">
+        </div>
+        <div>
+            <img src="images/3.jpg" alt="" class="img5">
+        </div>
+    </section>
+
+    <!-- forth container box -->
+    <section class="forth-container-box">
+        <div>
+            <img src="images/11.jpg" alt="" class="img6">
+        </div>
+        <div>
+            <img src="images/12.jpg" alt="" class="img7">
+        </div>
+    </section>
+
+    <!-- fifth container box -->
+    <section class="fifth-container-box">
+        <div class="first-half">
+            <span class="textbox3">Follow Us</span>
+            <span class="textbox4">#white&yellow</span>
+        </div>
+        <div class="second-half">
+            <div class="img-gallery">
+                <img src="gallery/1.jpg" alt="" class="galleryimg" data-hover="example-text">
+                <img src="gallery/2.jpg" alt="" class="galleryimg" data-hover="example-text">
+                <img src="gallery/6.jpg" alt="" class="galleryimg" data-hover="example-text">
+                <img src="gallery/4.jpg" alt="" class="galleryimg" data-hover="example-text">
+                <img src="gallery/5.jpg" alt="" class="galleryimg" data-hover="example-text">
+                <img src="gallery/3.jpg" alt="" class="galleryimg" data-hover="example-text">
+                <img src="gallery/7.jpg" alt="" class="galleryimg" data-hover="example-text">
+                <img src="gallery/9.jpg" alt="" class="galleryimg" data-hover="example-text">
+                <div id="hidden-division" class="hid-div">
+                    <img src="gallery/10.jpg" alt="" class="galleryimg" data-hover="example-text">
+                    <img src="gallery/11.jpg" alt="" class="galleryimg" data-hover="example-text">
+                    <img src="gallery/12.jpg" alt="" class="galleryimg" data-hover="example-text">
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="button-1" onload="hideDiv()" onclick="showDiv()">
+                    Load More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- sixth container box -->
+    <section class="sixth-container-box">
+        <div class="upperbox">
+            <div class="firstbox">
+                <span>White & Yellow</span>
+            </div>
+            <div class="secondbox">
+                <span>500 Terry Francine Street</span>
+                <span>San Francisco, CA 94158</span>
+                <span>Tel: 123-456-7890</span>   
+            </div>
+            <div class="thirdbox">
+                <span>Mon - Fri: 7am - 7pm</span>
+                <span>Saturday: 8am - 7pm</span>
+                <span>Sunday: closed </span>      
+            </div>
+            <div class="lastbox">
+                <span>
+                    Let's be friends and have eggs benedict
+                </span>
+                <div class="emaildiv">
+                    <input type="email" placeholder="Enter your email here*" class="emailbox">
+                    <button class="button-2" type="submit">Subscribe</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="belowbox">
+            <span>© 2023 White and Yellow. Created and Designed by Nick</span>
+        </div>
+    </section>
+
+
+    <!-- Javascript -->
+    <script>
+        const hidDiv = document.getElementById('hidden-division');
+        let button1 = document.querySelector('.button-1');
+        hidDiv.style.display = "none";
+
+        function hideDiv(){
+            hidDiv.style.display = "none";
+            button1.style.display= 'block';
+        }
+        
+        function showDiv(){
+            hidDiv.style.display = "inline-flex";
+            button1.style.display= 'none';
+        }
+
+        let closednavBar = document.getElementById('hiddennavbar');
+        let baricon = document.getElementById('baricon');
+        let booktable = document.getElementById('booktable');
+
+        function opennav(){
+            closednavBar.style.display = 'flex';
+            baricon.style.opacity = "0";
+            booktable.style.opacity = "0";
+        }
+        function closenav(){
+            closednavBar.style.display = 'none';
+            baricon.style.opacity = "1";
+            booktable.style.opacity = "1";
+        }
+
+    </script>
+    <script>
+        function chatbox(img){
+        img.src = "icons/messenger.png";
+    }
+
+    function talkbox(img){
+        img.src = "icons/chat.png";
+    }
+
+    </script>
+</body>
+</html>

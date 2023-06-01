@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a96c5020c6.js" crossorigin="anonymous"></script>
+    <script src="script1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <title>White & Yellow</title>
+</head>
+<body>
+    <section class="nav-hidden-section" id="hiddennavbar">
+        <i class="fa-solid fa-x" onclick="closenav()"></i>
+        <div class="nav-box">
+            <a href="home.html">Home</a>
+            <a href="story.html">Our Story</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+            <a style="color:white;">Reservation</a>
+        </div>
+    </section>
+    <!-- header -->
+    <section id="navSec">
+        <div class="nav-bar">
+            <i class="fa-solid fa-bars" id="baricon" onclick="opennav()"></i>
+            <span class="middle-title">
+                White & Yellow
+            </span>
+            <span class="right-title" id="booktable">
+                Book a Table
+            </span>
+        </div>
+    </section>
+    
+    <!-- Fixed Side Bars -->
+    <section class="sidebarsleft">
+        <div class="left-bar">
+            <span class="sidetext1">See Our Menu</span>
+            <span class="sidetext2">
+                <img src="icons/fried-egg (1).png" alt="" width="40px"
+                height="40px" onmouseover="yellowEgg(this)" onmouseout="whiteEgg(this)">
+            </span>
+        </div>
+    </section>
+    <section class="sidebarsright">
+        <div class="right-bar">
+            <div class="sideblock1"></div>
+            <div class="sideblock2">
+                <img src="icons/chat.png" alt="" width="40px"
+                height="40px"  onmouseover="chatbox(this)" onmouseout="talkbox(this)">
+            </div>
+        </div>
+    </section>
+
+<form action="">
+    <!-- Add Location -->
+    <section class="location-box">
+        <div class="add-location">
+            <span>You need to add your information before reserving a table.</span>
+            <button onclick="hideshowdiv()" id="btn-addinfo">Add Information</button>
+        </div>
+
+        <div class="input-location" id="hidden-input-div">
+            <div class="firstline">
+                <input type="text" placeholder="Full Name" class="contact-input" required>
+                <input type="email" placeholder="Email Address" class="contact-input" required>
+            </div>
+            <div class="secondline">
+                <input type="text" placeholder="Phone Number" class="contact-input" required>
+                <input type="address" placeholder="Address" class="contact-input" required>
+            </div>
+            <!-- <div class="thirdline">
+                <button class="submit-info-button" type="submit">Submit Now</button>
+            </div> -->
+        </div>
+    </section>
+    
+    <div class="black-line-box">
+        <div class="black-line"></div>
+    </div>
+
+    <!-- Reservation Table -->
+    <section class="res-div">
+        <span class="res-title1">Make a reservation <img src="icons/padlock.png" alt="" width="30px" height="30px" id="lockimg"></span>
+        <span class="res-title2">To help us find the best table for you, select the preferred party size, date, and time of your reservation.</span>
+    </section>
+
+    <section class="res-div2" id="unablebox1">
+        <div class="res-box">
+            <div class="selection-box">
+                <label for="guests">Party size</label>
+                <select id="guests" name="guests" class="selectbox">
+                    <option value="1">1 guest</option>
+                    <option value="2" selected>2 guests</option>
+                    <option value="3">3 guests</option>
+                    <option value="4">4 guests</option>
+                    <option value="5">5 guests</option>
+                    <option value="6">6 guests</option>
+                </select>
+            </div>
+            <div class="selection-box">
+                <label for="cars">Date</label>
+                <input type="date" class="date-box" id="date">
+            </div>
+            <div class="selection-box">
+                <label for="res-time">Time</label>
+                <select id="res-time" name="res-time" class="selectbox">
+                    <option value="800">8:00 AM</option>
+                    <option value="1200">12:00 PM</option>
+                    <option value="300">3:00 PM</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="res-radio-container" id="unablebox2">
+        <div class="res-radio-box">
+            <label for="">Choose an available time slot:</label>
+            <div class="reserve-now">
+                <!-- first line -->
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time1">7:00 AM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time2">7:15 AM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time3">7:30 AM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time4">7:45 AM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time5">8:00 AM</label>
+                </li>
+
+                <!-- second line -->
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time6">8:15 AM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time7">8:30 AM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" checked="checked"/>
+                    <label for="time" id="time8">8:45 AM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time9">9:00 AM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time10">9:15 AM</label>
+                </li>
+
+                <!-- third line -->
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time11">9:30 AM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time12">9:45 AM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time13">10:00 AM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time14">10:15 PM</label>
+                </li>
+                <li>
+                    <input type="radio" name="time" />
+                    <label for="time" id="time15">10:30 AM</label>
+                </li>
+            </div>
+            <div class="res-button-box">
+                <button type="submit" class="res-button">Reserve Now</button>
+            </div>
+    </section>
+</form>
+
+    <!-- Food Order -->
+    <section class="order-food-container" id="orderfoodcontainer">
+        <div class="order-food-box">
+            <span>Do you wish to order food beforehand?</span>
+            <button onclick="showfoodbox()" id="orderfood">Order Food</button>
+        </div>
+    </section>
+
+    <section class="order-food-large-container" id="large-container">
+        <section class="order-food-container2">
+            <div class="order-food-title">
+                <span class="order-span1">Served All Day Every Day Since 2015</span>
+                <span>I’m a menu description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ab.</span>
+            </div>
+        </section>
+    
+        <section class="outer-food-container">
+            <section class="order-food-container3">
+                <div class="order-food-nav">
+                    <div class="select-foodcat-box">
+                        <select name="food" id="food" class="foodcat">
+                            <option value="" selected>Select food category</option>
+                            <option value="cr">Chef Recommendation</option>
+                            <option value="veg">Vegan</option>
+                            <option value="lac">Lactose</option>
+                            <option value="org">Organic</option>
+                        </select>
+                        <div class="order-line"></div>
+                    </div>
+                    <div class="select-foodcat-box2">
+                        <ul>
+                            <li><a href="#breakfast" onclick="mybreakfast()" id="bk">Breakfast</a></li>
+                            <li><a href="#pastcake" onclick="mypastries()" id="pc">Pastries & Cakes</a></li>
+                            <li><a href="#drinks" onclick="mydrinks()" id="dk">Drinks</a></li>
+                        </ul>
+                    </div>
+                    <div class="select-foodcat-box3">
+                        <img src="icons/shopping-bag.png" alt="" width="15px">
+                        <span>0</span>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="greyline-box">
+                <div class="greyline"></div>
+            </section>
+        </section>
+        
+        <section class="food-order-box">
+            <div class="food-gallery">
+                <span class="breakfast-title" id="breakfast">Breakfast</span>
+                <div class="food-gallery-box">
+                    <!-- dishes -->
+                    <div class="foodbox" onclick="openPopup()">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span" id="dishtitle">Granola</span>
+                                <span class="dish-desc-span" id="dishdesc">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/granula.jpg" width="100%"
+                            height="100%" alt="" id="dishimage">
+                        </div>
+                    </div>
+                    <div class="foodbox" onclick="openPopup()">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span" id="dishtitle">Overnight Oats</span>
+                                <span class="dish-desc-span" id="dishdesc">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 1;">
+                                    <img src="icons/plant-based.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/oats.jpg" width="100%"
+                            height="100%" alt="" id="dishimage">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Superfood Bowl</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 1;">
+                                    <img src="icons/plant-based.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/vg.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/positive-vote.png" width="25px" alt="">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/superfood.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Continental Breakfast</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/vg.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/positive-vote.png" width="25px" alt="">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/cbreakfast.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Avocado Toast</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 1;">
+                                    <img src="icons/plant-based.png" alt="" width="25px">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                    <img src="icons/positive-vote.png" width="25px" alt="" style="display: none;">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/avocadotoast.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Brioche Toast</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                    <img src="icons/positive-vote.png" width="25px" alt="" style="display: none;">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/Brioche.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Eggs Benedict</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                    <img src="icons/positive-vote.png" width="25px" alt="" style="display: none;">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/eggbenedict.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Eggs and Bacon</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                    <img src="icons/positive-vote.png" width="25px" alt="" style="display: none;">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/eggbacon.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Smoked Salmon Bagel</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                    <img src="icons/positive-vote.png" width="25px" alt="" style="display: none;">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/smokedbagel.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Bakery Basket</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 1;">
+                                    <img src="icons/plant-based.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/vg.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/chef.png" width="25px" alt="">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/smokedbagel.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Pancakes</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 1;">
+                                    <img src="icons/plant-based.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/vg.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/positive-vote.png" width="25px" alt="">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/3.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+                <br>
+    
+                <span class="breakfast-title" id="pastcake">Pastries & Cakes</span>
+                <div class="food-gallery-box">
+                    <!-- dishes -->
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Apple Pie</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 1;">
+                                    <img src="icons/plant-based.png" alt="" width="25px">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                    <img src="icons/positive-vote.png" width="25px" alt="">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/applepie.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Cheese Cake</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/cheesecake.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Croissant</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/vg.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/positive-vote.png" width="25px" alt="">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/croissant.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Muffin</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/vg.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/positive-vote.png" width="25px" alt="">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/muffin.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Scones</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                    <img src="icons/positive-vote.png" width="25px" alt="" style="display: none;">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/scone.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <span class="breakfast-title" id="drinks">Drinks</span>
+                <div class="food-gallery-box">
+                    <!-- dishes -->
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Coffee</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                    <img src="icons/positive-vote.png" width="25px" alt="">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/coffee.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="foodbox">
+                        <div class="foodbox-left">
+                            <div class="dish-container">
+                                <span class="dish-header-span">Cocktail</span>
+                                <span class="dish-desc-span">I'm a dish description. Lorem ipsum dolor sit amet consectetur adipisicing elit...</span>
+                                <div class="icon-box" style="opacity: 0;">
+                                    <img src="icons/plant-based.png" alt="" width="25px" style="display: none;">
+                                    <img src="icons/vg.png" alt="" width="25px">
+                                </div>
+                                <span class="dish-price-span">MMK 5000</span>
+                            </div>
+                        </div>
+                        <div class="foodbox-right">
+                            <img src="images/cocktail.jpg" width="100%"
+                            height="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- <section>
+        <div class="dish-popup-container" id="popup-box">
+            <div class="dish-popup-top">
+                <img src="" width="100%" height="100%" alt="" id="imgid">
+                <img src="icons/close.png" width="30px" alt="" class="closebtn" onclick="closePopup()">
+            </div>
+            <div class="dish-popup-middle">
+                <span class="popup-dish" id="dishid"></span>
+                <span class="popup-dish-desc" id="descid"></span>
+                <div class="special-req-box">
+                    <span class="specialreq-title">Special Request</span>
+                    <textarea class="special-textarea" name="" id=""></textarea>
+                </div>
+            </div>
+            <div class="dish-popup-bottom">
+
+            </div>
+        </div>
+    </section> -->
+
+    <!-- sixth container box -->
+    <section class="sixth-container-box">
+        <div class="upperbox">
+            <div class="firstbox">
+                <span>White & Yellow</span>
+            </div>
+            <div class="secondbox">
+                <span>500 Terry Francine Street</span>
+                <span>San Francisco, CA 94158</span>
+                <span>Tel: 123-456-7890</span>   
+            </div>
+            <div class="thirdbox">
+                <span>Mon - Fri: 7am - 7pm</span>
+                <span>Saturday: 8am - 7pm</span>
+                <span>Sunday: closed </span>   
+            </div>
+            <div class="lastbox">
+                <span>
+                    Let's be friends and have eggs benedict
+                </span>
+                <div class="emaildiv">
+                    <input type="email" placeholder="Enter your email here*" class="emailbox">
+                    <button class="button-2" type="submit">Subscribe</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="belowbox">
+            <span>© 2023 White and Yellow. Created and Designed by Nick</span>
+        </div>
+    </section>
+    
+
+    <!-- Javascript -->
+    <script>
+        let closednavBar = document.getElementById('hiddennavbar');
+        let baricon = document.getElementById('baricon');
+        let booktable = document.getElementById('booktable');
+
+        function opennav(){
+            closednavBar.style.display = 'flex';
+            baricon.style.opacity = "0";
+            booktable.style.opacity = "0";
+        }
+        function closenav(){
+            closednavBar.style.display = 'none';
+            baricon.style.opacity = "1";
+            booktable.style.opacity = "1";
+        }
+    </script>
+    <script>
+        function chatbox(img){
+            img.src = "icons/messenger.png";
+        }
+
+        function talkbox(img){
+            img.src = "icons/chat.png";
+        }
+    </script>
+    <script>
+        var inputdiv = document.getElementById("hidden-input-div");
+        var btninfo = document.getElementById("btn-addinfo");
+
+        var unablebox1 = document.getElementById("unablebox1");
+        var unablebox2 = document.getElementById("unablebox2");
+
+        var orderfoodcontainer = document.getElementById("orderfoodcontainer");
+        var largecontainer = document.getElementById("large-container");
+
+        var lockimg = document.getElementById("lockimg");
+        
+        inputdiv.style.display = "none";
+        unablebox1.style.pointerEvents = "none";
+        unablebox2.style.pointerEvents = "none";
+        orderfoodcontainer.style.pointerEvents = "none";
+        largecontainer.style.pointerEvents = "none";
+        function hideshowdiv(){
+            if (inputdiv.style.display !== "none") {
+                inputdiv.style.display = "none";
+                btninfo.innerHTML = "Add Information";
+                unablebox1.style.pointerEvents = "none";
+                unablebox2.style.pointerEvents = "none";
+                orderfoodcontainer.style.pointerEvents = "none";
+                largecontainer.style.pointerEvents = "none";
+                lockimg.style.visibility = "visible";
+            } else {
+                inputdiv.style.display = "flex";
+                btninfo.innerHTML = "Cancel Information";
+                unablebox1.style.pointerEvents = "auto";
+                unablebox2.style.pointerEvents = "auto";
+                orderfoodcontainer.style.pointerEvents = "auto";
+                largecontainer.style.pointerEvents = "auto";
+                lockimg.style.visibility = "hidden";
+            }
+        }
+
+    </script>
+    <script>
+        const dateInput = document.getElementById('date');
+
+        //  Using the visitor's timezone
+        dateInput.value = formatDate();
+
+        // console.log(formatDate());
+
+        function padTo2Digits(num) {
+            return num.toString().padStart(2, '0');
+        }
+
+        function formatDate(date = new Date()) {
+            return [
+                date.getFullYear(),
+                padTo2Digits(date.getMonth() + 1),
+                padTo2Digits(date.getDate()),
+            ].join('-');
+        }
+        // dateInput.value = new Date().toISOString().split('T')[0];
+
+        // console.log(new Date().toISOString().split('T')[0]);
+
+    </script>
+    <script>
+        var time1 = document.getElementById("time1");
+        var time2 = document.getElementById("time2");
+        var time3 = document.getElementById("time3");
+        var time4 = document.getElementById("time4");
+        var time5 = document.getElementById("time5");
+
+        var time6 = document.getElementById("time6");
+        var time7 = document.getElementById("time7");
+        var time8 = document.getElementById("time8");
+        var time9 = document.getElementById("time9");
+        var time10 = document.getElementById("time10");
+
+        var time11 = document.getElementById("time11");
+        var time12 = document.getElementById("time12");
+        var time13 = document.getElementById("time13");
+        var time14 = document.getElementById("time14");
+        var time15 = document.getElementById("time15");
+
+        $(document).ready(function(){
+            $("select.selectbox").change(function(){
+                let selectedItem = $(this).children("option:selected").val();
+                if (selectedItem === "800"){
+                    time1.innerHTML = "7:00 AM";
+                    time2.innerHTML = "7:15 AM";
+                    time3.innerHTML = "7:30 AM";
+                    time4.innerHTML = "7:45 AM";
+                    time5.innerHTML = "8:00 AM";
+
+                    time6.innerHTML = "8:15 AM";
+                    time7.innerHTML = "8:30 AM";
+                    time8.innerHTML = "8:45 AM";
+                    time9.innerHTML = "9:00 AM";
+                    time10.innerHTML = "9:15 AM";
+
+                    time11.innerHTML = "9:30 AM";
+                    time12.innerHTML = "9:45 AM";
+                    time13.innerHTML = "10:00 AM";
+                    time14.innerHTML = "10:15 AM";
+                    time15.innerHTML = "10:30 AM";
+                }
+                else if(selectedItem === "1200"){
+                    time1.innerHTML = "10:45 AM";
+                    time2.innerHTML = "11:00 AM";
+                    time3.innerHTML = "11:15 AM";
+                    time4.innerHTML = "11:30 AM";
+                    time5.innerHTML = "11:45 AM";
+
+                    time6.innerHTML = "12:00 PM";
+                    time7.innerHTML = "12:15 PM";
+                    time8.innerHTML = "12:30 PM";
+                    time9.innerHTML = "12:45 PM";
+                    time10.innerHTML = "1:00 PM";
+
+                    time11.innerHTML = "1:15 PM";
+                    time12.innerHTML = "1:30 PM";
+                    time13.innerHTML = "1:45 PM";
+                    time14.innerHTML = "2:00 PM";
+                    time15.innerHTML = "2:15 PM";
+                }
+                else{
+                    time1.innerHTML = "2:30 PM";
+                    time2.innerHTML = "2:45 PM";
+                    time3.innerHTML = "3:00 PM";
+                    time4.innerHTML = "3:15 PM";
+                    time5.innerHTML = "3:30 PM";
+
+                    time6.innerHTML = "3:45 PM";
+                    time7.innerHTML = "4:00 PM";
+                    time8.innerHTML = "4:15 PM";
+                    time9.innerHTML = "4:30 PM";
+                    time10.innerHTML = "4:45 PM";
+
+                    time11.innerHTML = "5:00 PM";
+                    time12.innerHTML = "5:15 PM";
+                    time13.innerHTML = "5:30 PM";
+                    time14.innerHTML = "5:45 PM";
+                    time15.innerHTML = "6:00 PM";
+                }
+                
+            });
+        });
+    </script>
+    <script>
+        var bk = document.getElementById("bk");
+        var pc = document.getElementById("pc");
+        var dk = document.getElementById("dk");
+        function mybreakfast(){
+            bk.style.color = "orange";
+            dk.style.color = "black";
+            pc.style.color = "black";
+        }
+        function mypastries(){
+            bk.style.color = "black";
+            dk.style.color = "black";
+            pc.style.color = "orange";
+        }
+        function mydrinks(){
+            bk.style.color = "black";
+            dk.style.color = "orange";
+            pc.style.color = "black";
+        }
+
+    </script>
+    <script>
+        var largecontainer = document.getElementById("large-container");
+        var orderfood = document.getElementById("orderfood");
+
+        largecontainer.style.display = "none";
+        function showfoodbox(){
+            if (largecontainer.style.display !== "none"){
+                largecontainer.style.display = "none";
+                orderfood.innerHTML = "Order Food";
+            }
+            else{
+                largecontainer.style.display = "block";
+                orderfood.innerHTML = "Cancel Order";
+            }
+        }
+    </script>
+    <!-- <script>
+        var dishtitle = document.getElementById("dishtitle").innerHTML;
+        var dishdesc = document.getElementById("dishdesc").innerHTML;
+        var imgsrc = document.getElementById("dishimage").getAttribute('src');
+
+        var popupbox = document.getElementById("popup-box");
+        function openPopup(){
+            popupbox.classList.add("open-popup");
+            var dishid = document.getElementById("dishid");
+            dishid.innerHTML = dishtitle;
+
+            var descid = document.getElementById("descid");
+            descid.innerHTML = dishdesc;
+
+            var imgid = document.getElementById("imgid");
+            imgid.src = imgsrc;
+
+        }
+
+        function closePopup(){
+            popupbox.classList.remove("open-popup");
+        }
+    </script> -->
+</body>
+</html>
